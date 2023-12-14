@@ -12,7 +12,7 @@ pipeline {
                  sh 'docker build -t myweb .'
             }
         }
-        stage('To delete the old images') {
+        stage('To delete the previous images') {
             steps {
                  sh 'docker rm -f mywebimage'
             }
