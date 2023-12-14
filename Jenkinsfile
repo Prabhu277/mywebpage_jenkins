@@ -7,7 +7,7 @@ pipeline {
                  checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Prabhu277/mywebpage_jenkins.git']])
             }
         }
-        stage('Build Images') {
+        stage('Build the Images') {
             steps {
                  sh 'docker build -t myweb .'
             }
